@@ -26,9 +26,10 @@ class Channel:
     def get_service(self):
         return build('youtube', 'v3', developerKey=api_key)
 
-    def to_json(self, name):
+    @classmethod
+    def to_json(cls, name):
         file = open(name, "w+")
-        channel_id = self.__id
+        channel_id = cls.get_id
         channel = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
         return file.write(json.dumps(channel, indent=2, ensure_ascii=False))
 
@@ -70,7 +71,7 @@ chn2.get_info()
 # print(chn1.video_count)
 # print(chn1.url)
 # print(chn1.get_service())
-# chn1.to_json('chn1.json')
+chn1.to_json('chn1.json')
 print(chn1)
 print(chn2)
 print(chn1 > chn2)
