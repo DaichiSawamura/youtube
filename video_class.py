@@ -27,12 +27,3 @@ class PLVideo(Video):
 
     def __str__(self):
         return f'{self.title} ({self.playlist_name})'
-
-
-video1 = Video('9lO06Zxhu88')
-video2 = PLVideo('BBotskuyw_M', 'PL7Ntiz7eTKwrqmApjln9u4ItzhDLRtPuD')
-print(video1)
-print(video2)
-# print(video.title)
-# print(video.like_count)
-# print(video.view_count)

@@ -2,3 +2,5 @@ pip==23.0.1
 wheel==0.37.1
 setuptools==60.2.0
 pyparsing==3.0.9
+DateTime==5.0
+isodate==0.6.1
